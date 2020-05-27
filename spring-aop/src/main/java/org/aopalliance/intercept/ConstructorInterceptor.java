@@ -19,6 +19,8 @@ package org.aopalliance.intercept;
 import javax.annotation.Nonnull;
 
 /**
+ *构造方法拦截器
+ *
  * Intercepts the construction of a new object.
  *
  * <p>The user should implement the {@link
@@ -46,6 +48,7 @@ import javax.annotation.Nonnull;
 public interface ConstructorInterceptor extends Interceptor  {
 
 	/**
+	 * 再构造方法执行之前或之后，执行需要回调的构造函数方法
 	 * Implement this method to perform extra treatments before and
 	 * after the construction of a new object. Polite implementations
 	 * would certainly like to invoke {@link Joinpoint#proceed()}.

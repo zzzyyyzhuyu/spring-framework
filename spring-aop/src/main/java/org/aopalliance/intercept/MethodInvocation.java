@@ -21,6 +21,8 @@ import java.lang.reflect.Method;
 import javax.annotation.Nonnull;
 
 /**
+ * 方法类型的回调方法集
+ *
  * Description of an invocation to a method, given to an interceptor
  * upon method-call.
  *
@@ -33,6 +35,7 @@ import javax.annotation.Nonnull;
 public interface MethodInvocation extends Invocation {
 
 	/**
+	 * 获取需要会回调的方法
 	 * Get the method being called.
 	 * <p>This method is a friendly implementation of the
 	 * {@link Joinpoint#getStaticPart()} method (same result).

@@ -20,6 +20,8 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 /**
+ * 方法类型的拦截器
+ *
  * Intercepts calls on an interface on its way to the target. These
  * are nested "on top" of the target.
  *
@@ -46,6 +48,8 @@ import javax.annotation.Nullable;
 public interface MethodInterceptor extends Interceptor {
 
 	/**
+	 * 再方法执行前或者后，调用需要回调的方法
+	 *
 	 * Implement this method to perform extra treatments before and
 	 * after the invocation. Polite implementations would certainly
 	 * like to invoke {@link Joinpoint#proceed()}.

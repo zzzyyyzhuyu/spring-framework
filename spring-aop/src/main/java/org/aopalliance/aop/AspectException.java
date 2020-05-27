@@ -17,6 +17,9 @@
 package org.aopalliance.aop;
 
 /**
+ * 切面异常类
+ * 继承自RuntimeException
+ *
  * Superclass for all AOP infrastructure exceptions.
  * Unchecked, as such exceptions are fatal and end user
  * code shouldn't be forced to catch them.

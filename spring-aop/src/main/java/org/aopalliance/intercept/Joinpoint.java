@@ -22,6 +22,8 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 /**
+ * 连接点
+ *
  * This interface represents a generic runtime joinpoint (in the AOP
  * terminology).
  *
@@ -43,6 +45,8 @@ import javax.annotation.Nullable;
 public interface Joinpoint {
 
 	/**
+	 * 继续执行下面的拦截器链
+	 *
 	 * Proceed to the next interceptor in the chain.
 	 * <p>The implementation and the semantics of this method depends
 	 * on the actual joinpoint type (see the children interfaces).
@@ -53,6 +57,8 @@ public interface Joinpoint {
 	Object proceed() throws Throwable;
 
 	/**
+	 * 返回保存当前切点静态对象的对象
+	 *
 	 * Return the object that holds the current joinpoint's static part.
 	 * <p>For instance, the target object for an invocation.
 	 * @return the object (can be null if the accessible object is static)
@@ -61,6 +67,8 @@ public interface Joinpoint {
 	Object getThis();
 
 	/**
+	 * 返回当前切点的静态对象部分
+	 *
 	 * Return the static part of this joinpoint.
 	 * <p>The static part is an accessible object on which a chain of
 	 * interceptors are installed.

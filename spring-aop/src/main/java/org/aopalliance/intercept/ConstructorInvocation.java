@@ -21,6 +21,7 @@ import java.lang.reflect.Constructor;
 import javax.annotation.Nonnull;
 
 /**
+ * 构造方法的回调
  * Description of an invocation to a constructor, given to an
  * interceptor upon constructor-call.
  *
@@ -33,6 +34,8 @@ import javax.annotation.Nonnull;
 public interface ConstructorInvocation extends Invocation {
 
 	/**
+	 * 获取需要回调的构造方法列表
+	 *
 	 * Get the constructor being called.
 	 * <p>This method is a friendly implementation of the
 	 * {@link Joinpoint#getStaticPart()} method (same result).
